@@ -1,0 +1,390 @@
+== CS 241 Autograder Note: ==
+This autograder is a preliminary assessment of your program's correctness. Your
+grade may change UP OR DOWN based on the CORRECTNESS OF YOUR PROGRAM. We make every effort to ensure
+that our autograder is 'smart' enough to not count off for simple things like grammar but, in doing so,
+we may inadvertently allow for incorrect code to be counted as correct. If we have to change our script
+to better reflect the CORRECTNESS OF YOUR PROGRAM, we will run the script on EVERY PROGRAM and update
+EVERY AUTOGRADER OUTPUT to ensure fairness to all students. Thanks for understanding! - CS 241 Staff
+
+(Please note, this autograder does not reflect a late submission penalty. This will be applied on Compass.)
+
+
+=== MP3 CS 241 Autograder Summary ===
+Program Execution Score (90% weight): 24.0/24.0 (100.0%)
+Program Heap Freed (5% weight): PASSED (100%)
+Correct Memory Usage (5% weight): PASSED (100%)
+
+
+=== MP3 CS 241 Scoring Breakdown ===
+--- Details for "MP3" ---
+Total "MP3" Sub-Score: 24.0
+	... Details for "MP3", "Does the shell start and exit?"...
+	Total "MP3", "Does the shell start and exit?" Sub-Score: 1.0
+		Shell was able to exit successfully.
+	... Details for "MP3", "Does the shell have the correct prompt?"...
+	Total "MP3", "Does the shell have the correct prompt?" Sub-Score: 1.0
+		Shell contains the correct prompt.
+	... Details for "MP3", "Test 'cd folder'"...
+	Total "MP3", "Test 'cd folder'" Sub-Score: 1.0
+		test successful.
+	... Details for "MP3", "Test 'cd xxx' into an invalid directory"...
+	Total "MP3", "Test 'cd xxx' into an invalid directory" Sub-Score: 1.0
+		'cd xxx' into invalid directory successful.
+	... Details for "MP3", "Attempt to list empty history"...
+	Total "MP3", "Attempt to list empty history" Sub-Score: 2.0
+		Shell displayed empty history correctly!
+	... Details for "MP3", "Attempt to list history"...
+	Total "MP3", "Attempt to list history" Sub-Score: 2.0
+		Shell displayed history entry correctly!
+	... Details for "MP3", "Attempt to list multiple history entries"...
+	Total "MP3", "Attempt to list multiple history entries" Sub-Score: 2.0
+		Shell displayed two history entries successfully!
+	... Details for "MP3", "Zero argument non built-in command."...
+	Total "MP3", "Zero argument non built-in command." Sub-Score: 2.0
+		Shell ran non built-in command successfully!
+	... Details for "MP3", "One argument non built-in command."...
+	Total "MP3", "One argument non built-in command." Sub-Score: 2.0
+		Shell ran non built-in command successfully!
+	... Details for "MP3", "Re-run one no-argument command via history"...
+	Total "MP3", "Re-run one no-argument command via history" Sub-Score: 2.0
+		Shell ran one non built-in command via history successfully!
+	... Details for "MP3", "PID print after successsful command execution"...
+	Total "MP3", "PID print after successsful command execution" Sub-Score: 2.0
+		Shell printed "Command executed by pid" correctly!
+	... Details for "MP3", "Detect usage of system() or fork()+exec()"...
+	Total "MP3", "Detect usage of system() or fork()+exec()" Sub-Score: 6.0
+		A call to fork and exec has been found. The shell is using fork()+exec()
+
+
+
+
+=== MP3 CS 241 Raw Autograder Log ===
+[config]: Initializing the AssignmentGrader class "mp3"...
+[config]: Initializing the SegmentGrader class "mp3_1". Loading...
+[config]: Assignment initalization complete!
+[info]: The submission in "../../svn/cs241/jlin61" for assignment "mp3" is ready to be graded. Running grading tasks...
+[info]: Beginning to grade assignment "MP3 CS 241"...
+[fine]: Launching assignment-specific code for "MP3 CS 241", "MP3 CS 241"...
+[finer]: Running command [make] with a timeout of 60000ms.
+[finer]: Completed execution of "make" with exit code = 0.
+[finest]: [stdout:1]: gcc -o log.o log.c -c -g -Wall -W
+[finest]: [stdout:2]: gcc -o shell shell.c log.o -g -Wall -W
+[fine]: Launching segment-specific code for "MP3 CS 241", "MP3 CS 241", "MP3"...
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Does the shell start and exit?"...
+[finer]: Running command [mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=23437)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23437
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Does the shell have the correct prompt?"...
+[finer]: Running command [mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=23443)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23443
+[finer]: Testing for occurance 1 of "\d+.*/class/cs241/private/mp/ag-full" in process output.
+[finer]: Found pattern at line 1 of standard output. Returning gorup 0: "23443)/class/cs241/private/mp/ag-full".
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Test 'cd folder'"...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "cd mp3-autograde
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=23448)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23448
+[finest]: [stdout:2]: (pid=23448)/class/cs241/private/mp/ag-full-fa13/mp3-autograde$ Command executed by pid=23448
+[finer]: Testing for occurance 1 of "mp3-autograde" in process output.
+[finer]: Found pattern at line 2 of standard output. Returning gorup 0: "mp3-autograde".
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Test 'cd xxx' into an invalid directory"...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "cd blahblahblah
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=23453)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23453
+[finest]: [stdout:2]: blahblahblah: No such file or directory
+[finest]: [stdout:3]: (pid=23453)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23453
+[finer]: Testing for string "blahblahblah" in process output.
+[finer]: String found in line 2 of standard output.
+[finer]: Testing for string "No such file or directory" in process output.
+[finer]: String found in line 2 of standard output.
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Attempt to list empty history"...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "!#
+" to process and then waiting 100ms...
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: (pid=23458)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23458
+[finest]: [stdout:2]: (pid=23458)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23458
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Attempt to list history"...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "pwd
+" to process and then waiting 100ms...
+[finer]: Writing input line "!#
+" to process and then waiting 100ms...
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: /class/cs241/private/mp/ag-full-fa13
+[finest]: [stdout:2]: (pid=23464)/class/cs241/private/mp/ag-full-fa13$ (pid=23464)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23464
+[finest]: [stdout:3]: pwd
+[finest]: [stdout:4]: (pid=23464)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23464
+[finer]: Testing for string "pwd" in process output.
+[finer]: String found in line 3 of standard output.
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Attempt to list multiple history entries"...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "pwd
+" to process and then waiting 100ms...
+[finer]: Writing input line "hostname
+" to process and then waiting 100ms...
+[finer]: Writing input line "!#
+" to process and then waiting 100ms...
+[finer]: Writing input line "exit
+" to process and then waiting 100ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: /class/cs241/private/mp/ag-full-fa13
+[finest]: [stdout:2]: (pid=23470)/class/cs241/private/mp/ag-full-fa13$ linux-v1.ews.illinois.edu
+[finest]: [stdout:3]: (pid=23470)/class/cs241/private/mp/ag-full-fa13$ (pid=23470)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23470
+[finest]: [stdout:4]: pwd
+[finest]: [stdout:5]: hostname
+[finest]: [stdout:6]: (pid=23470)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23470
+[finer]: Testing for string "pwd" in process output.
+[finer]: String found in line 4 of standard output.
+[finer]: Testing for string "hostname" in process output.
+[finer]: String found in line 5 of standard output.
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Zero argument non built-in command."...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "hostname
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: linux-v1.ews.illinois.edu
+[finest]: [stdout:2]: (pid=23477)/class/cs241/private/mp/ag-full-fa13$ (pid=23477)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23477
+[finer]: Testing for string "illinois" in process output.
+[finer]: String found in line 1 of standard output.
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "One argument non built-in command."...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "echo Chicken
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: Chicken
+[finest]: [stdout:2]: (pid=23483)/class/cs241/private/mp/ag-full-fa13$ (pid=23483)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23483
+[finer]: Testing for string "Chicken" in process output.
+[finer]: String found in line 1 of standard output.
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Re-run one no-argument command via history"...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "hostname
+" to process and then waiting 10ms...
+[finer]: Writing input line "!h
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: linux-v1.ews.illinois.edu
+[finest]: [stdout:2]: (pid=23489)/class/cs241/private/mp/ag-full-fa13$ (pid=23489)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23489
+[finest]: [stdout:3]: h matches hostname
+[finest]: [stdout:4]: linux-v1.ews.illinois.edu
+[finest]: [stdout:5]: (pid=23489)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23489
+[finer]: Testing for occurance 2 of "illinois" in process output.
+[finer]: Found pattern at line 1 of standard output. Need 1 more occurance(s).
+[finer]: Found pattern at line 4 of standard output. Returning gorup 0: "illinois".
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "PID print after successsful command execution"...
+[fine]: Launching element-specific code for "MP3 CS 241", "MP3 CS 241", "MP3", "Detect usage of system() or fork()+exec()"...
+[finer]: Running command [./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "ls
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "./mp3-autograde/shell" with exit code = 0.
+[finest]: [stdout:1]: alice.txt
+[finest]: [stdout:2]: cs241AssignmentGraderBase.class
+[finest]: [stdout:3]: cs241AssignmentGraderBase.java
+[finest]: [stdout:4]: cs241SegmentGraderBase.class
+[finest]: [stdout:5]: cs241SegmentGraderBase.java
+[finest]: [stdout:6]: edu
+[finest]: [stdout:7]: huq2
+[finest]: [stdout:8]: hyu34
+[finest]: [stdout:9]: jzwang2
+[finest]: [stdout:10]: killvg.sh
+[finest]: [stdout:11]: libdrm_1.class
+[finest]: [stdout:12]: libdrm_1.java
+[finest]: [stdout:13]: libdrm.class
+[finest]: [stdout:14]: libdrm-grade
+[finest]: [stdout:15]: libdrm.java
+[finest]: [stdout:16]: libdrm-src
+[finest]: [stdout:17]: log_diff
+[finest]: [stdout:18]: logs
+[finest]: [stdout:19]: logs_c89
+[finest]: [stdout:20]: logs_c99
+[finest]: [stdout:21]: mp0
+[finest]: [stdout:22]: mp0_1.class
+[finest]: [stdout:23]: mp0_1.java
+[finest]: [stdout:24]: mp0-autograde
+[finest]: [stdout:25]: mp0.class
+[finest]: [stdout:26]: mp0.java
+[finest]: [stdout:27]: mp1
+[finest]: [stdout:28]: mp1_1.class
+[finest]: [stdout:29]: mp1_1.java
+[finest]: [stdout:30]: mp1-autograde
+[finest]: [stdout:31]: mp1_c99_makefile
+[finest]: [stdout:32]: mp1.class
+[finest]: [stdout:33]: mp1.java
+[finest]: [stdout:34]: mp3
+[finest]: [stdout:35]: mp3_1.class
+[finest]: [stdout:36]: mp3_1.java
+[finest]: [stdout:37]: mp3_1.java~
+[finest]: [stdout:38]: mp3_1.java.bak
+[finest]: [stdout:39]: mp3-autograde
+[finest]: [stdout:40]: mp3.class
+[finest]: [stdout:41]: mp3.java
+[finest]: [stdout:42]: mp3.java~
+[finest]: [stdout:43]: mp4
+[finest]: [stdout:44]: mp4_1.class
+[finest]: [stdout:45]: mp4_1.java
+[finest]: [stdout:46]: mp4_1.java~
+[finest]: [stdout:47]: mp4-autograde
+[finest]: [stdout:48]: mp4.class
+[finest]: [stdout:49]: mp4.java
+[finest]: [stdout:50]: mp4.java~
+[finest]: [stdout:51]: mp5
+[finest]: [stdout:52]: mp5_1.class
+[finest]: [stdout:53]: mp5_1.java
+[finest]: [stdout:54]: mp5-autograde
+[finest]: [stdout:55]: mp5.class
+[finest]: [stdout:56]: mp5.java
+[finest]: [stdout:57]: mp5-sp12
+[finest]: [stdout:58]: mp6
+[finest]: [stdout:59]: mp6_1.class
+[finest]: [stdout:60]: #mp6_1.java#
+[finest]: [stdout:61]: mp6_1.java
+[finest]: [stdout:62]: mp6_1.java~
+[finest]: [stdout:63]: mp6.class
+[finest]: [stdout:64]: mp6.java
+[finest]: [stdout:65]: mp6.java~
+[finest]: [stdout:66]: mp7
+[finest]: [stdout:67]: mp7_1.class
+[finest]: [stdout:68]: mp7_1.java
+[finest]: [stdout:69]: mp7-autograde
+[finest]: [stdout:70]: mp7.class
+[finest]: [stdout:71]: mp7.java
+[finest]: [stdout:72]: mp8
+[finest]: [stdout:73]: mp8_1.class
+[finest]: [stdout:74]: mp8_1.java
+[finest]: [stdout:75]: mp8_1.java~
+[finest]: [stdout:76]: mp8_1$MakeServerRequestInThread.class
+[finest]: [stdout:77]: mp8_1$RunStudentProgramInThread.class
+[finest]: [stdout:78]: mp8-autograde
+[finest]: [stdout:79]: mp8.class
+[finest]: [stdout:80]: mp8.java
+[finest]: [stdout:81]: mp8.java~
+[finest]: [stdout:82]: mpx_client
+[finest]: [stdout:83]: mpx_client_1.class
+[finest]: [stdout:84]: mpx_client_1.java
+[finest]: [stdout:85]: mpx_client_1.java~
+[finest]: [stdout:86]: mpx_client_1$RunStudentProgramInThread.class
+[finest]: [stdout:87]: mpx_client-autograde
+[finest]: [stdout:88]: mpx_client.class
+[finest]: [stdout:89]: mpx_client.java
+[finest]: [stdout:90]: mpx_client.java~
+[finest]: [stdout:91]: mpx_server
+[finest]: [stdout:92]: mpx_server_1.class
+[finest]: [stdout:93]: mpx_server_1.java
+[finest]: [stdout:94]: mpx_server_1.java~
+[finest]: [stdout:95]: mpx_server_1$RunStudentProgramInThread.class
+[finest]: [stdout:96]: mpx_server-autograde
+[finest]: [stdout:97]: mpx_server.class
+[finest]: [stdout:98]: mpx_server.java
+[finest]: [stdout:99]: mpx_server.java~
+[finest]: [stdout:100]: org
+[finest]: [stdout:101]: server2
+[finest]: [stdout:102]: web
+[finest]: [stdout:103]: wget.html
+[finest]: [stdout:104]: xyuan12
+[finest]: [stdout:105]: yiboguo2
+[finest]: [stdout:106]: (pid=23496)/class/cs241/private/mp/ag-full-fa13$ (pid=23496)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23496
+[finer]: Testing for occurance 1 of "(pid=\d+)" in process output.
+[finer]: Found pattern at line 106 of standard output. Returning gorup 0: "pid=23496".
+[finer]: Testing for occurance 1 of "by pid\s*=\s*\d+" in process output.
+[finer]: Found pattern at line 106 of standard output. Returning gorup 0: "by pid=23496".
+[finer]: Testing for occurance 2 of "by pid\s*=\s*\d+" in process output.
+[finer]: Found pattern at line 106 of standard output. Need 1 more occurance(s).
+[finer]: Not enough occurances of the pattern was found; returning (null).
+[finer]: Running command [grep exec mp3-autograde/shell.c] with a timeout of 10000ms.
+[finer]: Completed execution of "grep" with exit code = 0.
+[finest]: [stdout:1]: const char *pInfo = "Command executed by pid=%d\n";
+[finest]: [stdout:2]: 		//fork(); ->execvp(argv[0], argv)//full credit
+[finest]: [stdout:3]: 			if(execvp(argv[0],argv)==-1){
+[finer]: Running command [grep fork mp3-autograde/shell.c] with a timeout of 10000ms.
+[finer]: Completed execution of "grep" with exit code = 0.
+[finest]: [stdout:1]: 		//fork(); ->execvp(argv[0], argv)//full credit
+[finest]: [stdout:2]: 		pid_t child_pid = fork();
+[finer]: Running command [grep system mp3-autograde/shell.c] with a timeout of 10000ms.
+[finer]: Completed execution of "grep" with exit code = 0.
+[finest]: [stdout:1]: 		//system(line);
+[fine]: Launching memory grader code for "MP3"...
+[finer]: Running command [valgrind ./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "pwd
+" to process and then waiting 10ms...
+[finer]: Writing input line "!p
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "valgrind" with exit code = 0.
+[finest]: [stdout:1]: /class/cs241/private/mp/ag-full-fa13
+[finest]: [stdout:2]: (pid=23517)/class/cs241/private/mp/ag-full-fa13$ (pid=23517)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23517
+[finest]: [stdout:3]: p matches pwd
+[finest]: [stdout:4]: /class/cs241/private/mp/ag-full-fa13
+[finest]: [stdout:5]: (pid=23517)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23517
+[finest]: [stderr:1]: ==23517== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==23517== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==23517== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==23517== Command: ./mp3-autograde/shell
+[finest]: [stderr:5]: ==23517== 
+[finest]: [stderr:6]: ==23517== 
+[finest]: [stderr:7]: ==23517== HEAP SUMMARY:
+[finest]: [stderr:8]: ==23517==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==23517==   total heap usage: 7 allocs, 7 frees, 300 bytes allocated
+[finest]: [stderr:10]: ==23517== 
+[finest]: [stderr:11]: ==23517== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==23517== 
+[finest]: [stderr:13]: ==23517== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==23517== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[fine]: Launching memory grader code for "MP3"...
+[finer]: Running command [valgrind ./mp3-autograde/shell] with a timeout of 10000ms.
+[finer]: Writing input line "pwd
+" to process and then waiting 10ms...
+[finer]: Writing input line "!p
+" to process and then waiting 10ms...
+[finer]: Writing input line "exit
+" to process and then waiting 10ms...
+[finer]: Completed execution of "valgrind" with exit code = 0.
+[finest]: [stdout:1]: /class/cs241/private/mp/ag-full-fa13
+[finest]: [stdout:2]: (pid=23527)/class/cs241/private/mp/ag-full-fa13$ (pid=23527)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23527
+[finest]: [stdout:3]: p matches pwd
+[finest]: [stdout:4]: /class/cs241/private/mp/ag-full-fa13
+[finest]: [stdout:5]: (pid=23527)/class/cs241/private/mp/ag-full-fa13$ Command executed by pid=23527
+[finest]: [stderr:1]: ==23527== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==23527== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==23527== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==23527== Command: ./mp3-autograde/shell
+[finest]: [stderr:5]: ==23527== 
+[finest]: [stderr:6]: ==23527== 
+[finest]: [stderr:7]: ==23527== HEAP SUMMARY:
+[finest]: [stderr:8]: ==23527==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==23527==   total heap usage: 7 allocs, 7 frees, 300 bytes allocated
+[finest]: [stderr:10]: ==23527== 
+[finest]: [stderr:11]: ==23527== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==23527== 
+[finest]: [stderr:13]: ==23527== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==23527== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[fine]: The assignment-specific grade() method completed successfully.
+[info]: The submission in "../../svn/cs241/jlin61" for assignment "mp3" has finished grading. Running final tasks...
